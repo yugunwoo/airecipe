@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레시피</title>
+    <link rel="stylesheet" href="dumpling3css.css">
+</head>
+<body>
+    <article class='recipe-card'>
+        <h2>비엔나만두강정</h2>
+        <div id='carousel' class='recipe-pic-frame'>
+          <div id='sliderBox' class='slider-box'>
+            <div class='recipe-pic pic1' role='img'></div>
+            <div class='recipe-pic pic2' role='img'></div>
+          </div>
+        </div>
+        <section>
+            <h3>비엔나만두강정</h3>
+            <p>만두 강정을 만드려다가 집에 비엔나소세지가 있어서 같이 만들어봤어요.</p>
+        
+            <p>- 2인분</p>
+        
+            <p>- 15분 이내</p>
+        
+            <p>- 아무나 쉽게</p>
+          </section>
+        <section>
+          <h3>재료 - Ingredients</h3>
+          <ul class='ingredient-list'>
+            <li>만두(교자만두/물만드) 10개</li>
+            <li>
+              비엔나소세지 1봉</li>
+            <li>
+              ----양념----</li>
+            <li>
+              물 1T</li>
+            <li>
+             간장 1T</li>
+            <li>
+             고추장 2T</li>
+            <li>
+             케찹 2T</li>
+            <li>
+             올리고당 1.5T</li>
+            <li>
+             다진마늘 1t</li>
+            <li>
+             참기름 약간</li>
+            <li>
+             깨 약간</li>
+          </ul>
+        </section>
+        <section>
+          <h3>조리순서 - Steps</h3>
+      
+          <p>1. 만두는 기름을 두룬 팬에 노릇하게 구워줍니다.</p>
+          <p>2. 비엔나 소세지에 원하는 모양대로 칼집을 내고 팬에 볶아줍니다.
+            양파가 있다면 같이 볶아줘도 좋아요:)</p>
+          <p>3. 비엔나가 어느정도 구워지면 만두를 같이 넣어줍니다.</p>
+          <p>4. 양념장을 넣고 양념이 고루 베이도록 잘 섞어줍니다.</p>
+          <p>5. 양념이 어느정도 베이면 위에 통깨를 뿌려 마무리합니다.</p>
+          <p>6. 간식이나 술안주, 밑반찬으로 먹기 좋은 비엔나만두강정 완성!</p>
+        </section>
+        <section>
+          <h3>팁 &amp; 주의사항</h3>
+          <p>
+            양념장은 기호에 따라 양을 적당히 조절해주세요~
+            <br>양념장 맛이 떡꼬치를 해먹어도 맛있을거같아요<br/>
+        </section>
+      </article>
+      </html>
+</body>
+<script>
+    let imageIndex = 0;
+let imageCount = document.getElementsByClassName('recipe-pic').length;
+let carousel = document.getElementById('carousel');
+let slider = document.getElementById('sliderBox');
+carousel.addEventListener('click', function(event) {
+  imageIndex = (imageIndex >= imageCount - 1) ? 0 : imageIndex + 1;
+  console.log((100 * imageIndex) + "%");
+  slider.style.left = (-100 * imageIndex) + "%";
+})
+</script>

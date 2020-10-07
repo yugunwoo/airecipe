@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레시피</title>
+    <link rel="stylesheet" href="chicken2.css">
+</head>
+<body>
+    <article class='chicken2'>
+        <h2>양파 닭사슴살 계란전</h2>
+        <div id='carousel' class='recipe-pic-frame'>
+          <div id='sliderBox' class='slider-box'>
+            <div class='recipe-pic pic1' role='img'></div>
+            <div class='recipe-pic pic2' role='img'></div>
+            <div class='recipe-pic pic3' role='img'></div>
+          </div>
+        </div>
+        <section>
+            <h3>달콤한 양파속에 꼭꼭 숨은 닭가슴살</h3>
+            <p>"양파는 익히면 더 달콤해 지니까요~ 거기에 냉장고에 오밀조밀 남아있던 자투리 채소들도 듬뿍 닭가슴살까지 숨겨 넣었더니 다들 잘~ 먹어주네요^^"</p>
+        
+            <p>- 4인분</p>
+        
+            <p>- 20분 이내</p>
+        
+            <p>- 아무나 쉽게</p>
+          </section>
+        <section>
+          <h3>재료 - Ingredients</h3>
+          <ul class='ingredient-list'>
+            <li>닭가슴살 50g</li>
+            <li>
+              양파 2개</li>
+            <li>
+              소금 약간</li>
+            <li>
+              달걀 3개</li>
+            <li>
+              각종자투리 야채 적당량</li>
+          </ul>
+        </section>
+        <section>
+          <h3>조리순서 - Steps</h3>
+      
+          <p>1. 양파는 껍질을 벗겨 손질해 링 모양을 살려 썰어줍니다.(남은 양파도 다져서 넣을꺼예요.</p>
+          <p>2. 각종 자투리 채소들을 잘게 다져주세요.</p>
+          <p>3. 단백질도 중요하니까 닭가슴살도 다져서 넣어주시구요.</p>
+          <p>4. 달걀 3개를 넣고, 소금으로 약간 간을 해줍니다. 잘 섞어 주세요~</p>
+          <p>5. 기름 두른 팬에 링으로 썰어둔 양파를 올리고 숟가락으로 달걀물을 한수저씩 떠 넣어줍니다.</p>
+          <p>6. 뒤집을때는 뒤집개 두개를 이용해 살살 뒤집어 주세요.</p>
+          <p>7. 속까지 골고루 익혀주세요.</p>
+        </section>
+        <section>
+          <h3>팁 &amp; 주의사항</h3>
+          <p>
+            약불에 타지않게 속까지 골고루 익혀주는게 중요해요~
+        </section>
+      </article>
+      </html>
+</body>
+<script>
+    let imageIndex = 0;
+let imageCount = document.getElementsByClassName('recipe-pic').length;
+let carousel = document.getElementById('carousel');
+let slider = document.getElementById('sliderBox');
+carousel.addEventListener('click', function(event) {
+  imageIndex = (imageIndex >= imageCount - 1) ? 0 : imageIndex + 1;
+  console.log((100 * imageIndex) + "%");
+  slider.style.left = (-100 * imageIndex) + "%";
+})
+</script>

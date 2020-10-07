@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>레시피2</title>
+        <link rel="stylesheet" href="egg2.css" />
+    </head>
+    <body>
+        <article class="egg2">
+            <h2>참치계란밥</h2>
+            <div id="carousel" class="recipe-pic-frame">
+                <div id="sliderBox" class="slider-box">
+                    <div class="recipe-pic pic1" role="img"></div>
+                    <div class="recipe-pic pic2" role="img"></div>
+                    <div class="recipe-pic pic3" role="img"></div>
+                </div>
+            </div>
+            <section>
+                <h3>참치계란밥</h3>
+                <p>
+                    "갑자기 놀러온 조카들 집에 있는 재료라고는 참치캔과 계란 뿐! 아이들 입 맛 합격!!
+                    후다닥 참치계란볶음밥 완성"
+                </p>
+
+                <p>- 2인분</p>
+
+                <p>- 20분 이내</p>
+
+                <p>- 초급</p>
+            </section>
+            <section>
+                <h3>재료 - Ingredients</h3>
+                <ul class="ingredient-list">
+                    <li>쌀밥 2공기</li>
+                    <li>
+                        달걀 3개
+                    </li>
+                    <li>
+                        캐챱 적당히
+                    </li>
+                    <li>
+                        참치캔 1개
+                    </li>
+                    <li>
+                        소금 약간
+                    </li>
+                    <li>
+                        올리브유 1T
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h3>조리순서 - Steps</h3>
+
+                <p>1. 달걀 3개를 깨서 소금 한꼬집을 넣고 풀어주세요.</p>
+                <p>2. 참치캔을 따서 기름은 쪽 빼고 달걀에 넣어주세요.</p>
+                <p>3. 달군팬에 버터를 넣어주세요.</p>
+                <p>4. 밥을 볶아주세요.</p>
+                <p>5. 참치달걀물을 부어주세요.</p>
+                <p>6. 뒤적뒤적 골고루 볶은 후 통깨로 마무리</p>
+            </section>
+            <section>
+                <h3>팁 &amp; 주의사항</h3>
+                <p>
+                    올리브유 대신 버터를 넣으면 더 고소합니다.
+                </p>
+            </section>
+        </article>
+        <script>
+            let imageIndex = 0;
+            let imageCount = document.getElementsByClassName('recipe-pic').length;
+            let carousel = document.getElementById('carousel');
+            let slider = document.getElementById('sliderBox');
+            carousel.addEventListener('click', function (event) {
+                imageIndex = imageIndex >= imageCount - 1 ? 0 : imageIndex + 1;
+                console.log(100 * imageIndex + '%');
+                slider.style.left = -100 * imageIndex + '%';
+            });
+        </script>
+    </body>
+</html>

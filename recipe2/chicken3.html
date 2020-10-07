@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레시피</title>
+    <link rel="stylesheet" href="chicken3.css">
+</head>
+<body>
+    <article class='chicken3'>
+        <h2>치즈불닭</h2>
+        <div id='carousel' class='recipe-pic-frame'>
+          <div id='sliderBox' class='slider-box'>
+            <div class='recipe-pic pic1' role='img'></div>
+            <div class='recipe-pic pic2' role='img'></div>
+            <div class='recipe-pic pic3' role='img'></div>
+          </div>
+        </div>
+        <section>
+            <h3>[간단 자취요리] 닭가슴살캔으로 치즈 불닭 만들기 / 혼술안주</h3>
+            <p>"간편하게 닭가슴살캔으로 만드는 방법을 준비했는데요 생닭(가슴살/다리살)으로 만드셔도 좋습니다 ! 하지만 저녁에 집에와서 간단하게 한잔하고 싶을때나 근처에 편의점 밖에 없을때 좋은 방법이겠죠?"</p>
+        
+            <p>- 1인분</p>
+        
+            <p>- 30분 이내</p>
+        
+            <p>- 아무나 쉽게</p>
+          </section>
+        <section>
+          <h3>재료 - Ingredients</h3>
+          <ul class='ingredient-list'>
+            <li>닭가슴살 1캔</li>
+            <li>
+              양파 1개</li>
+            <li>
+              양배추 1줌</li>
+            <li>
+              고추장 2T</li>
+            <li>
+              고춧가루 3T</li>
+            <li>
+              간장 1T</li>
+            <li>
+              설탕 2T</li>
+            <li>
+              다진마늘 1T</li>
+          </ul>
+        </section>
+        <section>
+          <h3>조리순서 - Steps</h3>
+      
+          <p>1. 우선 양파를 한입 크기로 썰어줍니다 :) 취향껏 채썰어도 좋아요</p>
+          <p>2. 양배추도 같은 크기로 썰어주세요.</p>
+          <p>3. 모든 양념을 넣고 섞어주세요.</p>
+          <p>4. 팬에 닭가슴살, 야채, 양념을 모두 넣어주세요.</p>
+          <p>5. 볶다보면 야채에서 물이 나오지만 물을 조금 첨가해 주셔도 좋아요</p>
+          <p>6. 이제 기름을 두르고 센불에 마무리로 볶아주세요</p>
+          <p>7. 이대로 먹어도 좋지만 저는 치즈를 추가해볼게요.</p>
+          <p>8. 전자레인지에 돌려주면 끝!</p>
+        </section>
+        <section>
+          <h3>팁 &amp; 주의사항</h3>
+          <p>
+            저는 양배추가 있어서 썼는데 양배추 다른용로도 사용하실게 아니라면 안사시는걸 추천드려요 양배추 진짜 처치곤란인거 아시죠...?
+        </section>
+      </article>
+      </html>
+</body>
+<script>
+    let imageIndex = 0;
+let imageCount = document.getElementsByClassName('recipe-pic').length;
+let carousel = document.getElementById('carousel');
+let slider = document.getElementById('sliderBox');
+carousel.addEventListener('click', function(event) {
+  imageIndex = (imageIndex >= imageCount - 1) ? 0 : imageIndex + 1;
+  console.log((100 * imageIndex) + "%");
+  slider.style.left = (-100 * imageIndex) + "%";
+})
+</script>

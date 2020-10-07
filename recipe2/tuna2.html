@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레시피</title>
+    <link rel="stylesheet" href="tuna2.css">
+</head>
+<body>
+    <article class='recipe-card'>
+        <h2>참치 알리오 올리오 볶음밥</h2>
+        <div id='carousel' class='recipe-pic-frame'>
+          <div id='sliderBox' class='slider-box'>
+            <div class='recipe-pic pic1' role='img'></div>
+            <div class='recipe-pic pic2' role='img'></div>
+            <div class='recipe-pic pic3' role='img'></div>
+          </div>
+        </div>
+        <section>
+            <h3>참치 알리올리오 볶음밥</h3>
+            <p>"찬밥 처리에 최고! 마늘향이 은은한 고소한 참치 볶음밥이에요"</p>
+        
+            <p>- 1인분</p>
+        
+            <p>- 15분 이내</p>
+        
+            <p>- 아무나 쉽게</p>
+          </section>
+        <section>
+          <h3>재료 - Ingredients</h3>
+          <ul class='ingredient-list'>
+            <li>밥 1공기</li>
+            <li>
+              마늘 5개</li>
+            <li>
+              참치 2스푼</li>
+            <li>
+              올리브유 약간</li>
+            <li>
+              달걀 1개</li>
+            <li>
+              소금 약간</li>
+          </ul>
+        </section>
+        <section>
+          <h3>조리순서 - Steps</h3>
+      
+          <p>1. 팬에 올리브유를 두르고 팬이 달궈지면 얇게 채 썬 마늘을 넣고 볶아주세요.</p>
+          <p>2. 마늘이 익는 동안 달걀을 곱게 풀고 굴소스 1큰술 또는 소금을 넣어 한번 더 섞어주세요.	</p>
+          <p>3. 마늘이 노릇노릇하게 익으면 밥을 넣고 볶아줍니다.</p>
+          <p>4. 밥이 어느 정도 볶아지면 참치를 넣어 볶아주세요.</p>
+          <p>5. 참치까지 고루 볶아지면 달걀을 넣고 여러번 뒤적거려 줍니다. 달걀이 다 익으면 완성!</p>
+          <p>6. 완성된 참치 알리올리오 볶음밥입니다~</p>
+          
+        </section>
+        <section>
+          <h3>팁 &amp; 주의사항</h3>
+          <p>
+            완성된 볶음밥은 맛을 보고 싱거울 땐 소금을 넣어 간을 맞춰주세요. 소금간 대신 굴소스 1스푼을 넣어도 되요.
+        </section>
+      </article>
+      </html>
+</body>
+<script>
+    let imageIndex = 0;
+let imageCount = document.getElementsByClassName('recipe-pic').length;
+let carousel = document.getElementById('carousel');
+let slider = document.getElementById('sliderBox');
+carousel.addEventListener('click', function(event) {
+  imageIndex = (imageIndex >= imageCount - 1) ? 0 : imageIndex + 1;
+  console.log((100 * imageIndex) + "%");
+  slider.style.left = (-100 * imageIndex) + "%";
+})
+</script>

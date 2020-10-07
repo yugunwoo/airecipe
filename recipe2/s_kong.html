@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레시피</title>
+    <link rel="stylesheet" href="kong.css">
+</head>
+<body>
+    <article class='recipe-card'>
+        <h2>소시지 콩나물찜</h2>
+        <div id='carousel' class='recipe-pic-frame'>
+          <div id='sliderBox' class='slider-box'>
+            <div class='recipe-pic pic1' role='img'></div>
+            <div class='recipe-pic pic2' role='img'></div>
+            <div class='recipe-pic pic3' role='img'></div>
+          </div>
+        </div>
+        <section>
+            <h3>집밥백선생에서 나온 소시지 콩나물찜</h3>
+            <p>"고기대신 소세지! 콩나물이 들어가서 개운한 소시지 콩나물찜."</p>
+        
+            <p>- 3인분</p>
+        
+            <p>- 30분 이내</p>
+        
+            <p>- 초급</p>
+          </section>
+        <section>
+          <h3>재료 - Ingredients</h3>
+          <ul class='ingredient-list'>
+            <li>-- 필수재료 --</li>
+            <li>프랑크소시지 3개</li>
+            <li>
+              콩나물 1봉지(200g)</li>
+            <li>
+              대파 1대</li>
+            <li>
+              양파 1/2개</li>
+            <li>
+              물 1종이컵</li>
+            <li>
+              식용유 약간</li>
+              <li>-- 양념재료 --</li>
+            <li>
+              고추장 2숟가락</li>
+            <li>
+              고춧가루 2숟가락</li>  
+            <li>
+               설탕 1숟가락</li>
+            <li>
+               간장 4숟가락</li>
+            <li>
+               다진마늘 1숟가락</li>
+               <li>
+                -- 전분물재료 --</li>
+            <li>
+                전분 1숟가락</li>
+            <li>
+                물 2숟가락</li>   
+          </ul>
+        </section>
+        <section>
+          <h3>조리순서 - Steps</h3>
+      
+          <p>1. 양파는 채썰고 대파와 프랑크소시지는 어슷 썰어 준비한다.</p>
+          <p>2. 팬에 식용유를 두르고 소시지를 반 정도 구운 후 물을 넣고 끓인다.</p>
+          <p>3. 파, 양파, 콩나물과 양념 재료를 넣는다.</p>
+          <p>4. 전분물을 만들어 조금씩 넣은 후 국물이 걸쭉해지면 불을 끄고 완성한다.</p>
+        </section>
+        <section>
+          <h3>팁 &amp; 주의사항</h3>
+          <p>
+            불을 끈 후 참기름을 둘러주면 고소함이 더해져요.
+        </section>
+      </article>
+      </html>
+</body>
+<script>
+    let imageIndex = 0;
+let imageCount = document.getElementsByClassName('recipe-pic').length;
+let carousel = document.getElementById('carousel');
+let slider = document.getElementById('sliderBox');
+carousel.addEventListener('click', function(event) {
+  imageIndex = (imageIndex >= imageCount - 1) ? 0 : imageIndex + 1;
+  console.log((100 * imageIndex) + "%");
+  slider.style.left = (-100 * imageIndex) + "%";
+})
+</script>

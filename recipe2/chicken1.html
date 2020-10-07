@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레시피</title>
+    <link rel="stylesheet" href="chicken1.css">
+</head>
+<body>
+    <article class='chicken1'>
+        <h2>닭장국</h2>
+        <div id='carousel' class='recipe-pic-frame'>
+          <div id='sliderBox' class='slider-box'>
+            <div class='recipe-pic pic1' role='img'></div>
+            <div class='recipe-pic pic2' role='img'></div>
+            <div class='recipe-pic pic3' role='img'></div>
+          </div>
+        </div>
+        <section>
+            <h3>오늘뭐먹지? 닭장국 레시피 닭백숙보다 맛있네</h3>
+            <p>"오는 길에 닭 한 마리 사서 보글보글 끓여 먹은 닭장국 간단한데 맛은 개인적으로 백숙보다 맛있네요"</p>
+        
+            <p>- 4인분</p>
+        
+            <p>- 30분 이내</p>
+        
+            <p>- 아무나 쉽게</p>
+          </section>
+        <section>
+          <h3>재료 - Ingredients</h3>
+          <ul class='ingredient-list'>
+            <li>닭 1마리</li>
+            <li>
+              당근 적당량</li>
+            <li>
+              마늘 적당량</li>
+            <li>
+              간장 2큰술</li>
+            <li>
+              양파 적당량</li>
+            <li>
+              대파 적당량</li>
+            <li>
+              참기름 반큰술</li>
+          </ul>
+        </section>
+        <section>
+          <h3>조리순서 - Steps</h3>
+      
+          <p>1. 오늘 뭐 먹지에선 닭 껍질째 요리했어요 더 깊은 맛이 나고 맛있다 하지만 삶으면 껍질은 먹지도 않고 기름기가 너무 많은듯해서 제거 후 내장이랑 핏물을 깔끔하게 손질했어요</p>
+          <p>2. 물은 닭이 잠길 정도로 넉넉히 부어주세요.</p>
+          <p>3. 분량의 채소는 채 썰어 준비해주시면 돼요</p>
+          <p>4. 끓기 시작하면 불순물을 제거해주세요 껍질+손질을 잘해서 그런지 불순물이 거의 없어요</p>
+          <p>5. 마늘,간장을 넣고 끓여주세요 간장은 너무 많이 넣으면 색이 탁해지니 딱 2큰술만,, 15분 정도 삶아주세요	</p>
+          <p>6. 국물이 우러나오면 채소를 넣고 끓여주세요</p>
+          <p>7. 마무리로 참기름 반 큰술을 넣어주세요 전 따로 간을 하지 않았지만 싱거우면 소금으로 간을 하세요</p>
+        </section>
+        <section>
+          <h3>팁 &amp; 주의사항</h3>
+          <p>
+            국물 맛이 좋은 닭장국 완성 닭백숙이랑은 또 다른 맛이에요, 간장+참기름 때문인듯,, 닭은 소금에 찍어 먹거나, 살만 발라내어 국물이랑 같이 먹음 딱!!
+        </section>
+      </article>
+      </html>
+</body>
+<script>
+    let imageIndex = 0;
+let imageCount = document.getElementsByClassName('recipe-pic').length;
+let carousel = document.getElementById('carousel');
+let slider = document.getElementById('sliderBox');
+carousel.addEventListener('click', function(event) {
+  imageIndex = (imageIndex >= imageCount - 1) ? 0 : imageIndex + 1;
+  console.log((100 * imageIndex) + "%");
+  slider.style.left = (-100 * imageIndex) + "%";
+})
+</script>

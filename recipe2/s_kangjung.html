@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레시피</title>
+    <link rel="stylesheet" href="kangjung.css">
+</head>
+<body>
+    <article class='recipe-card'>
+        <h2>소시지강정</h2>
+        <div id='carousel' class='recipe-pic-frame'>
+          <div id='sliderBox' class='slider-box'>
+            <div class='recipe-pic pic1' role='img'></div>
+            <div class='recipe-pic pic2' role='img'></div>
+            <div class='recipe-pic pic3' role='img'></div>
+          </div>
+        </div>
+        <section>
+            <h3>닭강정 보다 맛있다!? 안먹어봤음 지금 당장 맹글어봐요! 소시지강정</h3>
+            <p>"술안주로 딱 좋은 간편한 소시지강정!"</p>
+        
+            <p>- 2인분</p>
+        
+            <p>- 10분 이내</p>
+        
+            <p>- 아무나</p>
+          </section>
+        <section>
+          <h3>재료 - Ingredients</h3>
+          <ul class='ingredient-list'>
+            <li>-- 필수재료 --</li>
+            <li>비엔나소시지 250g</li>
+            <li>
+              다진 땅콩 약간</li>
+            <li>-- 소스재료 --</li>
+            <li>설탕 1T</li>
+            <li>물엿 1T</li>
+            <li>진간장 1/2T</li>
+            <li>케첩 1/2T</li>
+            <li>물 2T</li>
+            <li>다진마늘 1/2T</li>
+              
+          </ul>
+        </section>
+        <section>
+          <h3>조리순서 - Steps</h3>
+      
+          <p>1. 소시지 끝에 +십자모양의 칼집을 낸다.</p>
+          <p>2. 끓는 물에 소시지를 1분 정도 데친다.</p>
+          <p>3. 팬에 식용유를 두르고 소시지를 바삭하게 굽는다.</p>
+          <p>4. 소스를 넣고 섞은 후 땅콩을 넣어 마무리한다.</p>
+        </section>
+        <section>
+          <h3>팁 &amp; 주의사항</h3>
+          <p>
+            물엿 대신 올리고당을 넣어도 됩니다.
+        </section>
+      </article>
+      </html>
+</body>
+<script>
+    let imageIndex = 0;
+let imageCount = document.getElementsByClassName('recipe-pic').length;
+let carousel = document.getElementById('carousel');
+let slider = document.getElementById('sliderBox');
+carousel.addEventListener('click', function(event) {
+  imageIndex = (imageIndex >= imageCount - 1) ? 0 : imageIndex + 1;
+  console.log((100 * imageIndex) + "%");
+  slider.style.left = (-100 * imageIndex) + "%";
+})
+</script>

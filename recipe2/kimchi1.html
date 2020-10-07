@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레시피</title>
+    <link rel="stylesheet" href="kimchi1css.css">
+</head>
+<body>
+    <article class='recipe-card'>
+        <h2>두부김치덮밥</h2>
+        <div id='carousel' class='recipe-pic-frame'>
+          <div id='sliderBox' class='slider-box'>
+            <div class='recipe-pic pic1' role='img'></div>
+            <div class='recipe-pic pic2' role='img'></div>
+          </div>
+        </div>
+        <section>
+            <h3> [ 한그릇요리 ] 두부김치덮밥</h3>
+            <p>"매콤 두부김치덮밥 입니다!"<br/></p>
+        
+            <p>- 1인분</p>
+        
+            <p>- 5분 이내</p>
+        
+            <p>- 초급</p>
+          </section>
+        <section>
+          <h3>재료 - Ingredients</h3>
+          <ul class='ingredient-list'>
+            <li>두부 2조각</li>
+            <li>
+              김치 1줌</li>
+            <li>
+              달걀 1개</li>
+            <li>
+            ----양념----</li>
+            <li>
+            진간장 1T</li>
+            <li>
+            설탕 1T</li>
+              <li>
+                다진마늘 1/2T</li>
+              <li>
+                고춧가루 1T</li>
+              <li>
+               참기름 1/2T</li>
+          </ul>
+        </section>
+        <section>
+          <h3>조리순서 - Steps</h3>
+      
+          <p>1. 식용유를 두르고 두부를 구워 주세요.</p>
+          <p>2. 한쪽을 굽고 뒤집어서 익히면서 잘라주세요.</p>
+          <p>3. 김치와 김치 국물을 넣고</p>
+          <p>4. 설탕 1T 진간장 1T 고추가루 1T 다진마늘 1/2T 넣고 중불에 볶아주세요.</p>
+          <p>5. 불을 끄고 참기름을 둘러 줍니다.</p>
+          <p>6. 팬에 식용유를 두르고 중불에 달걀 후라이를 만들어주세요.</p>
+          <p>7. 밥 위에 두부김치를 올리고 달걀 후라이를 올리고 맛있게 먹어요.</p>
+        </section>
+        <section>
+          <h3>팁 &amp; 주의사항</h3>
+          <p>
+            매우면 고춧가루 양을 줄여 줍니다. <br>두부를 구운 다음 김치를 넣어 주세요.<br/>
+        </section>
+      </article>
+      </html>
+</body>
+<script>
+    let imageIndex = 0;
+let imageCount = document.getElementsByClassName('recipe-pic').length;
+let carousel = document.getElementById('carousel');
+let slider = document.getElementById('sliderBox');
+carousel.addEventListener('click', function(event) {
+  imageIndex = (imageIndex >= imageCount - 1) ? 0 : imageIndex + 1;
+  console.log((100 * imageIndex) + "%");
+  slider.style.left = (-100 * imageIndex) + "%";
+})
+</script>

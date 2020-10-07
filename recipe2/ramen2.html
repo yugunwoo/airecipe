@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레시피</title>
+    <link rel="stylesheet" href="ramen2css.css">
+</head>
+<body>
+    <article class='recipe-card'>
+        <h2>시원한 냉라면</h2>
+        <div id='carousel' class='recipe-pic-frame'>
+          <div id='sliderBox' class='slider-box'>
+            <div class='recipe-pic pic1' role='img'></div>
+            <div class='recipe-pic pic2' role='img'></div>
+            <div class='recipe-pic pic3' role='img'></div>
+          </div>
+        </div>
+        <section>
+            <h3>시원한 냉라면 간편하게 만들기</h3>
+            <p><br>"여름이 성큼 눈앞으로 다가왔어요. <br/>
+
+                <br>여름은 덥고 끈적해서 싫지만, 시원한 음식을 맛있게 먹을 수 있다는 점은 참 좋죠!<br/>
+                
+                <br>여름의 별미인 냉라면을 쉽고 간단하게 만들어 볼까요?"<br/></p>
+        
+            <p>- 1인분</p>
+        
+            <p>- 10분 이내</p>
+        
+            <p>- 아무나 쉽게</p>
+          </section>
+        <section>
+          <h3>재료 - Ingredients</h3>
+          <ul class='ingredient-list'>
+            <li>라면 1봉지</li>
+            <li>
+              양파 1/4개</li>
+            <li>
+              얼음 적당량</li>
+            <li>
+              설탕 1큰술</li>
+            <li>
+             식초 1큰술</li>
+            <li>
+              참기름 1큰술</li>
+          </ul>
+        </section>
+        <section>
+          <h3>조리순서 - Steps</h3>
+      
+          <p>1. 양파는 얇게 채 썰어 찬물에 담가 매운기를 뺀다.</p>
+          <p>2. 끓는 물에 면과 후레이크를 삶는다.</p>
+          <p>3. 면과 후레이크가 다 삶아지면 찬물에 헹구고 체에 받쳐 물기를 뺀다.</p>
+          <p>4. 뜨거운 물 50ml에 라면 스프를 녹인다.</p>
+          <p>5. 스프를 푼 물에 식초, 설탕, 참기름을 1큰술씩 넣는다.</p>
+          <p>6. 그릇에 물기를 뺀 면과 후레이크를 넣는다.</p>
+          <p>7. 면에 준비한 스프 양념장을 붓는다.</p>
+          <p>8. 찬물과 200ml와 얼음을 붓는다.</p>
+          <p>9. 채썬 양파를 올리면 냉라면이 완성된다.</p>
+        </section>
+        <section>
+          <h3>팁 &amp; 주의사항</h3>
+          <p>
+            양파는 없다면 빼도 되지만 넣으면 식감이 아삭아삭해서 훨씬 맛있어요.
+        </section>
+      </article>
+      </html>
+</body>
+<script>
+    let imageIndex = 0;
+let imageCount = document.getElementsByClassName('recipe-pic').length;
+let carousel = document.getElementById('carousel');
+let slider = document.getElementById('sliderBox');
+carousel.addEventListener('click', function(event) {
+  imageIndex = (imageIndex >= imageCount - 1) ? 0 : imageIndex + 1;
+  console.log((100 * imageIndex) + "%");
+  slider.style.left = (-100 * imageIndex) + "%";
+})
+</script>

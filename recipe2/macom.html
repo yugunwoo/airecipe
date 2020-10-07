@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레시피</title>
+    <link rel="stylesheet" href="macom.css">
+</head>
+<body>
+    <article class='recipe-card'>
+        <h2>매콤 소시지 달걀 치즈구이</h2>
+        <div id='carousel' class='recipe-pic-frame'>
+          <div id='sliderBox' class='slider-box'>
+            <div class='recipe-pic pic1' role='img'></div>
+            <!--<div class='recipe-pic pic2' role='img'></div>
+            <div class='recipe-pic pic3' role='img'></div>-->
+          </div>
+        </div>
+        <section>
+            <h3>소시지를 이용한 매콤 소시지 달걀 치즈구이</h3>
+            <p>"간단하게 소시지를 이용해서 만들어 보세요."</p>
+        
+            <p>- 1인분</p>
+        
+            <p>- 5분 이내</p>
+        
+            <p>- 아무나 쉽게</p>
+          </section>
+        <section>
+          <h3>재료 - Ingredients</h3>
+          <ul class='ingredient-list'>
+            <li>비엔나소시지 8개</li>
+            <li>
+              달걀 1개</li>
+            <li>
+              청양고추 1개</li>
+            <li>
+              식용유 1큰술</li>
+            <li>
+              달걀 1개</li>
+            <li>
+              다진양파 3큰술</li>
+            <li>
+              피자치즈 50g</li>
+          </ul>
+        </section>
+        <section>
+          <h3>조리순서 - Steps</h3>
+      
+          <p>1. 양파, 청양고추, 소시지를 작게 썰어 주세요.</p>
+          <p>2. 달걀을 준비 해주세요.</p>
+          <p>3. 팬에 식용유를 두르고, 위의 썬 재료를 다 넣고 1~2분 정도 볶아 주세요.</p>
+          <p>4. 접시에 돌려 담고, 중앙에 달걀을 얹져 주세요.
+            전자렌즈에 2분 돌려 주세요.</p>
+          <p>5. 그 위에 피자치즈를 올리고, 30초더 돌려 주세요.	</p>
+          <p>6. 녹은 피자 치즈와 살짝 저어 주세요.</p>
+          <p>7. 그릇에 예쁘게 담고 파슬리를 살살 뿌려주면 완성</p>
+        </section>
+        <section>
+          <h3>팁 &amp; 주의사항</h3>
+          <p>
+            전자렌즈는 제품에 차이가 있을수 있으므로 시간을 조금씩 가감해 요리 해 주세요.
+        </section>
+      </article>
+      </html>
+</body>
+<script>
+    let imageIndex = 0;
+let imageCount = document.getElementsByClassName('recipe-pic').length;
+let carousel = document.getElementById('carousel');
+let slider = document.getElementById('sliderBox');
+carousel.addEventListener('click', function(event) {
+  imageIndex = (imageIndex >= imageCount - 1) ? 0 : imageIndex + 1;
+  console.log((100 * imageIndex) + "%");
+  slider.style.left = (-100 * imageIndex) + "%";
+})
+</script>

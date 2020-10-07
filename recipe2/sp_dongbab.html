@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레시피</title>
+    <link rel="stylesheet" href="sp_dong.css">
+</head>
+<body>
+    <article class='recipe-card'>
+        <h2>스팸동</h2>
+        <div id='carousel' class='recipe-pic-frame'>
+          <div id='sliderBox' class='slider-box'>
+            <div class='recipe-pic pic1' role='img'></div>
+            <div class='recipe-pic pic2' role='img'></div>
+            <div class='recipe-pic pic3' role='img'></div>
+          </div>
+        </div>
+        <section>
+            <h3>초간단 스팸동 만들기!</h3>
+            <p>"입맛 없을 때, 입맛 돌아오는 그 맛!"</p>
+        
+            <p>- 1인분</p>
+        
+            <p>- 15분 이내</p>
+        
+            <p>- 아무나</p>
+          </section>
+        <section>
+          <h3>재료 - Ingredients</h3>
+          <ul class='ingredient-list'>
+            <li>-- 필수재료 --</li>
+            <li>흰쌀밥 1공기</li>
+            <li>스팸캔 1개</li>
+            <li>파(생략가능)</li>
+            <li>-- 양념재료 --</li>
+            <li>간장 2T</li>
+            <li>물 100ml</li>
+            <li>설탕 2T</li>
+            <li>맛술 2T</li>
+              
+          </ul>
+        </section>
+        <section>
+          <h3>조리순서 - Steps</h3>
+      
+          <p>1. 재료를 준비합니다.</p>
+          <p>2. 우선 마지막에 올릴 파를 썰어줍니다.</p>
+          <p>3. 스팸을 얇게 편 썰어주세요.</p>
+          <p>4. 팬에 기름을 두르고 스팸을 구워주세요.</p>
+          <p>5. 이제 물과 분량의 양념을 넣어줍니다.</p>
+          <p>6. 간이 잘 배도록 앞뒤로 뒤집어 주세요.</p>
+          <p>7. 양념이 조금 남았을 때 불을 꺼줍니다.</p>
+          <p>8. 밥 위에 차곡차곡 올려줍니다.</p>
+          <p>9. 파와 깨로 마무리!</p>
+          <p>10. 스팸동 완성! 스팸 외에 다른 통조림햄을 이용해줘도 좋아요!</p>
+        </section>
+        <section>
+          <h3>팁 &amp; 주의사항</h3>
+          <p>
+            스팸 오리지널보다 스팸 마일드, 리챔, 오뚜기햄 등 조금 덜 짠 햄 추천!
+        </section>
+      </article>
+      </html>
+</body>
+<script>
+    let imageIndex = 0;
+let imageCount = document.getElementsByClassName('recipe-pic').length;
+let carousel = document.getElementById('carousel');
+let slider = document.getElementById('sliderBox');
+carousel.addEventListener('click', function(event) {
+  imageIndex = (imageIndex >= imageCount - 1) ? 0 : imageIndex + 1;
+  console.log((100 * imageIndex) + "%");
+  slider.style.left = (-100 * imageIndex) + "%";
+})
+</script>

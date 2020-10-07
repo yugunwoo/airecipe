@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>레시피</title>
+        <link rel="stylesheet" href="egg1.css" />
+    </head>
+    <body>
+        <article class="egg1">
+            <h2>고추장 달걀 조림</h2>
+            <div id="carousel" class="recipe-pic-frame">
+                <div id="sliderBox" class="slider-box">
+                    <div class="recipe-pic pic1" role="img"></div>
+                    <div class="recipe-pic pic2" role="img"></div>
+                    <div class="recipe-pic pic3" role="img"></div>
+                </div>
+            </div>
+            <section>
+                <h3>밥도둑 반찬 고추장 달걀조림 만들기!TV 알토란 레시피</h3>
+                <p>
+                    "평소 간장을 베이스로 한 계란장조림을 만들어 먹는 편인데요. TV알토란에서
+                    고추장을 베이스로 계란 장조림을 만들길래 저도 만들어 봤는데 우왕! 진짜 맛있어요.
+                    뜨끈한 밥에 비벼 먹으니 밥도둑이 따로 없네요^^"
+                </p>
+
+                <p>3인분</p>
+
+                <p>20분 이내</p>
+
+                <p>아무나 쉽게</p>
+            </section>
+            <section>
+                <h3>재료 - Ingredients</h3>
+                <ul class="ingredient-list">
+                    <li>달걀 10개</li>
+                    <li>
+                        양파 1개
+                    </li>
+                    <li>
+                        청양고추 3개
+                    </li>
+                    <li>
+                        쪽파 또는 대파 약간
+                    </li>
+                    <li>
+                        멸치 육수 1.5컵
+                    </li>
+                    <li>
+                        설탕 2T
+                    </li>
+                    <li>
+                        고추장 2T
+                    </li>
+                    <li>
+                        고춧가루 3T
+                    </li>
+                    <li>
+                        진간장 4T
+                    </li>
+                    <li>
+                        물엿 3T
+                    </li>
+                    <li>
+                        참기름 2T
+                    </li>
+                    <li>
+                        깨 1T
+                    </li>
+                    <li>
+                        후추 1ts
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h3>조리순서 - Steps</h3>
+
+                <p>1. 먼저 물에 소금1T,식초1T를 섞어 달걀을 7-8분 반숙으로 삶아 줍니다.</p>
+                <p>2. 달걀이 삶아지는 동안 양파는 굵게 채 썰고 청양고추도 큼직큼직 썰어주셔요.</p>
+                <p>3. 달걀이 삶아지면 얼음물에 바로 행궈 껍질을 깔끔히 잘 벗겨 줍니다.</p>
+                <p>
+                    4. 참기름과 깨를 제외한 모든 양념을 한곳에 미리 섞어주셔요.(평소 단 것 싫으시면
+                    설탕, 물엿은 조금 줄이셔도 됩니다)
+                </p>
+                <p>5. 냄비에 멸치육수를 넣고 양념을 잘 풀어 주신뒤 끓여줍니다.</p>
+                <p>6. 양념이 끓기 시작하면 양파와 청양고추를 넣고 끓여줍니다.</p>
+                <p>
+                    7. 양념이 반정도 졸아들었다 싶을때 반숙달걀을 투하 해줍니다.이대로 약 2분정도 더
+                    끓여주시면서 달걀에 색이 입혀지게 국물을 끼얹어 주세요.
+                </p>
+                <p>
+                    8. 마지막으로 참기름 2T와 깨1T를 넣고 잘섞어주시고 쪽파를 고명으로 올려주시면
+                    끝!
+                </p>
+            </section>
+            <section>
+                <h3>팁 &amp; 주의사항</h3>
+                <p>
+                    컵:종이컵/T:성인숟가락/ts:커피 티스푼
+                </p>
+            </section>
+        </article>
+
+        <script>
+            let imageIndex = 0;
+            let imageCount = document.getElementsByClassName('recipe-pic').length;
+            let carousel = document.getElementById('carousel');
+            let slider = document.getElementById('sliderBox');
+            carousel.addEventListener('click', function (event) {
+                imageIndex = imageIndex >= imageCount - 1 ? 0 : imageIndex + 1;
+                console.log(100 * imageIndex + '%');
+                slider.style.left = -100 * imageIndex + '%';
+            });
+        </script>
+    </body>
+</html>
