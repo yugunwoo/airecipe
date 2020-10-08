@@ -13,15 +13,19 @@
             crossorigin="anonymous"
         />
 
-        <title>Hello, world!</title>
+        <title>자취요리레시피 추천</title>
         <link rel="stylesheet" href="style.css" />
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5f7f0ce42bc826a2"></script>
+
+       <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
     </head>
 
     <link rel="stylesheet" href="style.css" />
 
     <body>
         <nav class="navbar navbar-expand-lg navbar-light nav-distance">
-            <a class="navbar-brand" href="#">인공지능 레시피</a>
+            <a class="navbar-brand" href="#">자취요리추천 사이트</a>
             <button
                 class="navbar-toggler"
                 type="button"
@@ -39,7 +43,7 @@
                         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
+                        <a class="nav-link" href="#">달걀</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Pricing</a>
@@ -53,10 +57,15 @@
             </div>
         </nav>
         <section class="section">
-            <h1 class="title">인공지능 레시피 추천</h1>
-            <h2 class="subtitle">재료에 맞는 레시피를 추천해드립니다.</h2>
+            <h1 class="title">자취 요리 레시피 추천</h1>
+            <h2 class="subtitle">자취생에게 맞는 레시피를 추천해드립니다.</h2>
         </section>
-
+        <section class="youtube pb-3" id="yotube-mid-link">
+        <div class="mt-3 youtube-cover d-flex flex-row-reverse align-items-center">
+            <!--<img src="img/youtube-copy.jpg" alt="youtube-icon" class="youtube-icon">-->
+            <a href="https://www.youtube.com/" style="text-decoration:none" class="youtube-link">달걀, 닭고기, 돼지고기, 라면, 만두, 배추김치, 소시지, 스팸, 식빵, 참치만을 인식할 수 있습니다.</a>
+           </div>
+    </section>
         
         <script
             class="jsbin"
@@ -73,7 +82,7 @@
                 <div class="drag-text">
                     <img src="img/upload.svg" class="mt-3 pt-3 upload" />
                     <h3 class="mb-5 pb-5 pt-4 upload-text">
-                        재료 사진을 올려놓거나 눌러서 업로드하세요!
+                        재료 사진을 <br>올려주세요!<br/>
                     </h3>
                 </div>
             </div>
@@ -83,13 +92,13 @@
                     <div class="spinner-border" role="status">
                         <span class="sr-only">Loading...</span>
                     </div>
-                    <p class="text-center">재료를 분석중입니다.</p>
+                    <p class="text-center">사진을 분석중입니다.</p>
                 </div>
                 <p class="result-Message"></p>
                 <div id="label-container"></div>
                 <div class="image-title-wrap">
-                    <button type="button" onclick="removeUpload()" class="remove-image">
-                        Remove <span class="image-title">Uploaded Image</span>
+                    <button type="button" onclick="removeUpload()" class="btn btn-outline-danger">
+                        다시하기 
                     </button>
                 </div>
             </div>
@@ -228,54 +237,54 @@ this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your pag
                 switch (prediction[0].className) {
                     case '달걀':
                         resultMessage =
-                            '<p><a href="recipe2/egg1.html" target="_blank"> <button type="button" class="button1">고추장 달걀 조림</button></a><p/> 	                                                                                          <p><a href="recipe2/egg2.html" target="_blank"> <button type="button" class="button2">참치계란밥</button></a><p/>                                                                                                  <p><a href="recipe2/egg3.html" target="_blank"> <button type="button" class="button3">파프리카 계란찜</button></a><p/>';
+                            '<p><a href="recipe2/egg1.html" target="_blank"> <button type="button" class="btn btn-outline-success">고추장 달걀 조림</button></a><p/> 	                                                                                          <p><a href="recipe2/egg2.html" target="_blank"> <button type="button" class="btn btn-outline-success">참치계란밥</button></a><p/>                                                                                                  <p><a href="recipe2/egg3.html" target="_blank"> <button type="button" class="btn btn-outline-success">파프리카 계란찜</button></a><p/>';
 
                         break;
 
                     case '닭고기':
                         resultMessage =
-                            '<p><a href="recipe2/chicken1.html" target="_blank"> <button type="button" class="button1">닭장국</button></a><p/>                                                                                                  <p><a href="recipe2/chicken2.html" target="_blank" ><button type="button" class="button2">양파 닭가슴살 계란전</button></a><p/>                                                                                      <p> <a href="recipe2/chicken3.html" target="_blank" ><button type="button" class="button3">치즈불닭</button></a><p/>';
+                            '<p><a href="recipe2/chicken1.html" target="_blank"> <button type="button" class="btn btn-outline-success">닭장국</button></a><p/>                                                                                                  <p><a href="recipe2/chicken2.html" target="_blank" ><button type="button" class="btn btn-outline-success">양파 닭가슴살 계란전</button></a><p/>                                                                                      <p> <a href="recipe2/chicken3.html" target="_blank" ><button type="button" class="btn btn-outline-success">치즈불닭</button></a><p/>';
                         break;
 
                     case '돼지고기':
                         resultMessage =
-                            '<p><a href="recipe2/pig1.html" target="_blank"> <button type="button" class="button1">돼지고기 고추장 찌개</button></a>  <p/>                                                                                        <p><a href="recipe2/pig2.html" target="_blank" ><button type="button" class="button2">부타동</button></a> <p/>                                                                                                    <p><a href="recipe2/pig3.html" target="_blank" ><button type="button" class="button3">목살 스테이크</button></a> <p/>';
+                            '<p><a href="recipe2/pig1.html" target="_blank"> <button type="button" class="btn btn-outline-success">돼지고기 고추장 찌개</button></a>  <p/>                                                                                        <p><a href="recipe2/pig2.html" target="_blank" ><button type="button" class="btn btn-outline-success">부타동</button></a> <p/>                                                                                                    <p><a href="recipe2/pig3.html" target="_blank" ><button type="button" class="btn btn-outline-success">목살 스테이크</button></a> <p/>';
 
                         break;
 
                     case '라면':
                         resultMessage =
-                            '<p><a href="recipe2/ramen1.html" target="_blank"> <button type="button" class="button1">굴소스마요라면</button></a> <p/>                                                                                            <p> <a href="recipe2/ramen2.html" target="_blank" ><button type="button" class="button2">시원한 냉라면</button></a>  <p/>                                                                                            <p> <a href="recipe2/ramen3.html" target="_blank" ><button type="button" class="button3">신라면투움바파스타</button></a><p/>';
+                            '<p><a href="recipe2/ramen1.html" target="_blank"> <button type="button" class="btn btn-outline-success">굴소스마요라면</button></a> <p/>                                                                                            <p> <a href="recipe2/ramen2.html" target="_blank" ><button type="button" class="btn btn-outline-success">시원한 냉라면</button></a>  <p/>                                                                                            <p> <a href="recipe2/ramen3.html" target="_blank" ><button type="button" class="btn btn-outline-success">신라면투움바파스타</button></a><p/>';
                         break;
 
                     case '만두':
                         resultMessage =
-                            '<p><a href="recipe2/dumpling1.html" target="_blank"> <button type="button" class="button1">떠먹는피자</button></a><p/>                                                                                                <p><a href="recipe2/dumpling2.html" target="_blank" ><button type="button" class="button2">만두동</button></a>  <p/>                                                                                                      <p><a href="recipe2/dumpling3.html" target="_blank" ><button type="button" class="button3">비엔나만두강정</button></a> <p/>';
+                            '<p><a href="recipe2/dumpling1.html" target="_blank"> <button type="button" class="btn btn-outline-success">떠먹는피자</button></a><p/>                                                                                                <p><a href="recipe2/dumpling2.html" target="_blank" ><button type="button" class="btn btn-outline-success">만두동</button></a>  <p/>                                                                                                      <p><a href="recipe2/dumpling3.html" target="_blank" ><button type="button" class="btn btn-outline-success">비엔나만두강정</button></a> <p/>';
                         break;
 
                     case '배추김치':
                         resultMessage =
-                            '<p><a href="recipe2/kimchi1.html" target="_blank"> <button type="button" class="button1">두부김치덮밥</button></a>    <p/>                                                                                            <p><a href="recipe2/kimchi2.html" target="_blank" ><button type="button" class="button2">베이컨김치말이밥</button></a>   <p/>                                                                                            <p><a href="recipe2/kimchi3.html" target="_blank" ><button type="button" class="button3">참치김치볶음</button></a> <p/>';
+                            '<p><a href="recipe2/kimchi1.html" target="_blank"> <button type="button" class="btn btn-outline-success">두부김치덮밥</button></a>    <p/>                                                                                            <p><a href="recipe2/kimchi2.html" target="_blank" ><button type="button" class="btn btn-outline-success">베이컨김치말이밥</button></a>   <p/>                                                                                            <p><a href="recipe2/kimchi3.html" target="_blank" ><button type="button" class="btn btn-outline-success">참치김치볶음</button></a> <p/>';
                         break;
 
                     case '소시지':
                         resultMessage =
-                            '<p><a href="recipe2/macom.html" target="_blank"> <button type="button" class="button1">매콤 소시지 달걀 치즈구이</button></a> <p/>                                                                                              <p><a href="recipe2/s_kong.html" target="_blank" ><button type="button" class="button2">소시지 콩나물찜</button></a><p/>                                                                                                    <p><a href="recipe2/s_kangjung.html" target="_blank" ><button type="button" class="button3">소시지강정</button></a> <p/>';
+                            '<p><a href="recipe2/macom.html" target="_blank"> <button type="button" class="btn btn-outline-success">매콤 소시지 달걀 치즈구이</button></a> <p/>                                                                                              <p><a href="recipe2/s_kong.html" target="_blank" ><button type="button" class="btn btn-outline-success">소시지 콩나물찜</button></a><p/>                                                                                                    <p><a href="recipe2/s_kangjung.html" target="_blank" ><button type="button" class="btn btn-outline-success">소시지강정</button></a> <p/>';
                         break;
 
                     case '스팸':
                         resultMessage =
-                            '<p><a href="recipe2/sp_dongbab.html" target="_blank"> <button type="button" class="button1">스팸동</button></a><p/>                                                                                                  <p> <a href="recipe2/sp_kimchibab.html" target="_blank" ><button type="button" class="button2">스팸김치볶음밥</button></a><p/>                                                                                                      <p> <a href="recipe2/sp_mayobab.html" target="_blank" ><button type="button" class="button3">스팸마요덮밥</button></a><p/>';
+                            '<p><a href="recipe2/sp_dongbab.html" target="_blank"> <button type="button" class="btn btn-outline-success">스팸동</button></a><p/>                                                                                                  <p> <a href="recipe2/sp_kimchibab.html" target="_blank" ><button type="button" class="btn btn-outline-success">스팸김치볶음밥</button></a><p/>                                                                                                      <p> <a href="recipe2/sp_mayobab.html" target="_blank" ><button type="button" class="btn btn-outline-success">스팸마요덮밥</button></a><p/>';
                         break;
 
                     case '식빵':
                         resultMessage =
-                            '<p><a href="recipe2/bread1.html" target="_blank"> <button type="button" class="button1">식빵애플파이</button></a><p/>                                                                                                                                                     <p> <a href="recipe2/bread2.html" target="_blank" ><button type="button" class="button2">식빵카레고로케</button></a><p/>                                                                                                                                                      <p> <a href="recipe2/bread3.html" target="_blank" ><button type="button" class="button3">식빵팝콘</button></a><p/>';
+                            '<p><a href="recipe2/bread1.html" target="_blank"> <button type="button" class="btn btn-outline-success">식빵애플파이</button></a><p/>                                                                                                                                                     <p> <a href="recipe2/bread2.html" target="_blank" ><button type="button" class="btn btn-outline-success">식빵카레고로케</button></a><p/>                                                                                                                                                      <p> <a href="recipe2/bread3.html" target="_blank" ><button type="button" class="btn btn-outline-success">식빵팝콘</button></a><p/>';
                         break;
 
                     case '참치':
                         resultMessage =
-                            '<p><a href="recipe2/tuna1.html" target="_blank"> <button type="button" class="button1">참치스테이크</button></a><p/>                                                                                                                                                      <p> <a href="recipe2/tuna2.html" target="_blank" ><button type="button" class="button2">참치 알리오 올리오 볶음밥</button></a><p/>                                                                                                                                                     <p> <a href="recipe2/tuna3.html" target="_blank" ><button type="button" class="button3">참치마요 볼</button></a><p/>';
+                            '<p><a href="recipe2/tuna1.html" target="_blank"> <button type="button" class="btn btn-outline-success">참치스테이크</button></a><p/>                                                                                                                                                      <p> <a href="recipe2/tuna2.html" target="_blank" ><button type="button" class="btn btn-outline-success">참치 알리오 올리오 볶음밥</button></a><p/>                                                                                                                                                     <p> <a href="recipe2/tuna3.html" target="_blank" ><button type="button" class="btn btn-outline-success">참치마요 볼</button></a><p/>';
                         break;
 
                     default:
