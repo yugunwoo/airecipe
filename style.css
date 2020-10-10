@@ -2,15 +2,15 @@ body {
   font-family: 'Jua', sans-serif;
   background-color: #FAFAA0;
   box-sizing: border-box;
-  color: #35465d;
+  color: #000a1a;
 }
 
 .file-upload {
   padding: 15% 3%;
     margin: 0 auto;
     border-radius: 10px;
-    border: solid 1.5px #f6f7fa;
-    background-color: #f6f7fa;
+    border: solid 1.5px #FAFAA0;
+    background-color: #FAFAA0;
 }
 
 .file-upload-btn {
@@ -86,7 +86,7 @@ body {
 }
 
 .drag-text h3 {
-  font-weight: 500;
+  font-weight: 300;
   text-transform: uppercase;
 }
 
@@ -131,7 +131,7 @@ body {
 .navbar-light .navbar-brand{
   line-height: 1.68;
   text-align: left;
-  color: #35465d;
+  color: #000a1a;
 }
 
 .navbar-light .navbar-toggler{
@@ -145,13 +145,15 @@ body {
 .title{
   line-height: 1.67;
   text-align: center;
-  color: #35465d;
+  color:#000a1a;
+  font-size: 2rem;  
 }
 
 .subtitle{ 
   line-height: 1.53;
   text-align: center;
-  color: #35465d;
+  color:#000a1a;
+  font-size: 1.5rem;
 }
 
 /* On screens that are 600px or less, set the background color to olive */
@@ -196,7 +198,7 @@ body {
     font-size: 1.5rem;
     line-height: 1.53;
     text-align: center;
-    color: #35465d;
+    color: #000a1a;
     margin: 0 auto;
 }
 
@@ -256,9 +258,8 @@ body {
 
 h1 {
   color: $white;
-  font-size: 1.25em;
-  font-weight: 900;
-  margin: 0 0 2em;
+  font-size: 2em;
+  font-weight: 500;
   
   @media (min-width: 450px) {
     font-size: 1.75em;
@@ -396,3 +397,6 @@ width: 200px;
   font-weight: 700;
 }
 
+.result-message{
+    font-size: 5rem;
+}
